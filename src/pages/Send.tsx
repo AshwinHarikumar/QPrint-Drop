@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { useParams, useSearchParams } from 'react-router';
 import { io, Socket } from 'socket.io-client';
-import { UploadCloud, CheckCircle2, AlertCircle, X, Pause, Play, FileText, Image as ImageIcon } from 'lucide-react';
+import { UploadCloud, CheckCircle2, AlertCircle, X, Pause, Play, FileText, Image as ImageIcon, User } from 'lucide-react';
 import { PrintSettings } from '../../shared/types';
 import Seo from '../components/Seo';
 
@@ -305,6 +305,20 @@ export default function Send() {
           </div>
         </div>
 
+      {/* Developer Credit */}
+      <div className="pt-8 w-full flex justify-center">
+        <a
+          href="https://ashwinharikumar.vercel.app/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="group flex items-center space-x-2 bg-white/5 border border-white/10 px-4 py-2 rounded-full hover:bg-white/10 transition-all duration-300 active:scale-95"
+        >
+          <User size={12} className="text-gray-400 group-hover:text-white transition-colors duration-300" />
+          <span className="font-['Inter',_sans-serif] text-[11px] font-medium text-gray-400 group-hover:text-white transition-colors duration-300 uppercase tracking-widest">
+            Developed by Ashwin Harikumar
+          </span>
+        </a>
+      </div>
       </div>
     </div>
   );

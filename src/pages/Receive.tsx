@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import QRCode from 'react-qr-code';
 import { io, Socket } from 'socket.io-client';
 import { PrintJob } from '../../shared/types';
-import { FileText, Image as ImageIcon, Trash2, Printer, Download, Eye, QrCode, ChevronDown, Phone, Loader2, ArrowUp, CheckCircle2, Cloud, Database, Shield, Wifi, Server } from 'lucide-react';
+import { FileText, Image as ImageIcon, Trash2, Printer, Download, Eye, QrCode, ChevronDown, Phone, Loader2, ArrowUp, CheckCircle2, Cloud, Database, Shield, Wifi, Server, User } from 'lucide-react';
 import Seo from '../components/Seo';
 
 export default function Receive() {
@@ -273,14 +273,17 @@ export default function Receive() {
       </div>
 
       {/* Developer Credit */}
-      <div className="pb-4 w-full flex justify-center z-10">
+      <div className="pb-6 w-full flex justify-center z-10">
         <a
           href="https://ashwinharikumar.vercel.app/"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-gray-400 hover:text-black transition-colors duration-300 font-['Inter',_sans-serif] text-[11px] uppercase tracking-widest opacity-60 hover:opacity-100"
+          className="group flex items-center space-x-2 bg-white border border-gray-200 px-4 py-2 rounded-full shadow-sm hover:shadow-md hover:border-black transition-all duration-300 active:scale-95"
         >
-          Developed by Ashwin Harikumar
+          <User size={12} className="text-gray-400 group-hover:text-black transition-colors duration-300" />
+          <span className="font-['Inter',_sans-serif] text-[11px] font-medium text-gray-500 group-hover:text-black transition-colors duration-300 uppercase tracking-widest">
+            Developed by Ashwin Harikumar
+          </span>
         </a>
       </div>
 
