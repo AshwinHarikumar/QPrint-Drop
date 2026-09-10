@@ -146,7 +146,7 @@ export default function Send() {
 
   if (sessionValid === false) {
     return (
-      <div className="min-h-screen bg-[#09090b] p-8 flex items-center justify-center font-sans">
+      <div className="min-h-dvh bg-[#09090b] p-8 flex items-center justify-center font-sans">
         <div className="bg-[#18181b] p-8 rounded-[2rem] shadow-2xl border border-red-500/20 text-center max-w-sm w-full">
           <AlertCircle className="w-12 h-12 text-red-500 mx-auto mb-4" />
           <h2 className="text-xl font-['Playfair_Display',_serif] text-white">Session Invalid</h2>
@@ -157,7 +157,7 @@ export default function Send() {
   }
 
   return (
-    <div className="min-h-screen bg-[#09090b] text-white font-sans pb-12 selection:bg-white/20 selection:text-white relative overflow-hidden">
+    <div className="min-h-dvh bg-[#09090b] text-white font-sans pb-12 selection:bg-white/20 selection:text-white relative overflow-hidden">
       <Seo
         title="QPrint Drop Sender | Upload Files to a Live Print Queue"
         description="Connect to a QPrint Drop session, upload files from your phone, and send them to a live desktop print queue."
@@ -183,7 +183,7 @@ export default function Send() {
         {/* Upload Area */}
         <button
           onClick={() => fileInputRef.current?.click()}
-          className="w-full bg-gradient-to-b from-[#18181b] to-[#09090b] border border-white/10 rounded-[2rem] p-10 flex flex-col items-center justify-center text-gray-400 hover:border-white/30 transition-all duration-500 active:scale-[0.98] shadow-2xl group relative overflow-hidden"
+          className="w-full bg-gradient-to-b from-[#18181b] to-[#09090b] border border-white/10 rounded-[2rem] p-8 sm:p-10 flex flex-col items-center justify-center text-gray-400 hover:border-white/30 transition-all duration-500 active:scale-[0.98] shadow-2xl group relative overflow-hidden"
         >
           <div className="absolute inset-0 bg-white/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
           <div className="w-16 h-16 bg-white/5 rounded-3xl flex items-center justify-center mb-6 border border-white/10 group-hover:scale-110 group-hover:bg-white/10 transition-all duration-500 shadow-inner">
@@ -255,7 +255,7 @@ export default function Send() {
           <div className="px-5 py-4 border-b border-white/5 bg-white/5 backdrop-blur-md">
             <h3 className="font-['Inter',_sans-serif] font-medium text-sm text-gray-200">Print settings</h3>
           </div>
-          <div className="p-5 space-y-5 text-sm font-['Inter',_sans-serif]">
+          <div className="p-4 sm:p-5 space-y-5 text-sm font-['Inter',_sans-serif]">
             <div className="flex justify-between items-center">
               <span className="text-gray-400 font-medium text-xs uppercase tracking-wider">Copies</span>
               <select

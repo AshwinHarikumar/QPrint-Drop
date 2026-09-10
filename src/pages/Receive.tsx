@@ -118,7 +118,7 @@ export default function Receive() {
   const sendUrl = `${window.location.origin}/send/${sessionId}?token=${token}`;
 
   return (
-    <div className="h-screen bg-[#f4f4f5] relative overflow-hidden flex flex-col font-sans text-gray-900 selection:bg-black selection:text-white">
+    <div className="min-h-dvh bg-[#f4f4f5] relative overflow-hidden flex flex-col font-sans text-gray-900 selection:bg-black selection:text-white">
       <Seo
         title="QPrint Drop | QR File Transfer and Mobile Printing"
         description="Generate a QR session, send files from mobile, and manage a live desktop print queue in real time."
@@ -146,11 +146,11 @@ export default function Receive() {
         </div>
       </div>
 
-      <div className="max-w-[1400px] w-full mx-auto flex-1 flex flex-col lg:flex-row items-center justify-center relative z-10 px-8 pt-20 pb-4">
+      <div className="max-w-[1400px] w-full mx-auto flex-1 flex flex-col lg:flex-row items-center justify-center relative z-10 px-8 pt-24 sm:pt-20 pb-4">
         
         {/* Left Side: Hero & Actions */}
         <div className="w-full lg:w-[55%] lg:pr-16 flex flex-col justify-center">
-          <h1 className="text-[3rem] sm:text-[4rem] xl:text-[5.5rem] font-['Playfair_Display',_serif] text-[#111] leading-[1.05] tracking-tight mb-6 xl:mb-8">
+          <h1 className="text-[2.5rem] sm:text-[3rem] lg:text-[4rem] xl:text-[5.5rem] font-['Playfair_Display',_serif] text-[#111] leading-[1.05] tracking-tight mb-6 xl:mb-8">
             Seamless<br />printing<br />forever
           </h1>
           <p className="font-['JetBrains_Mono',_monospace] text-gray-400 text-xs max-w-md leading-relaxed mb-10 uppercase tracking-[0.2em]">
@@ -188,7 +188,7 @@ export default function Receive() {
 
         {/* Right Side: The Dark Queue Card */}
         <div className="w-full lg:w-[45%] mt-8 lg:mt-0 flex justify-center lg:justify-end">
-          <div className="bg-[#09090b] rounded-[2.5rem] w-full max-w-[480px] h-[65vh] max-h-[600px] min-h-[450px] relative overflow-hidden shadow-2xl border border-gray-800 flex flex-col items-center p-8">
+          <div className="bg-[#09090b] rounded-[2.5rem] w-full max-w-[480px] h-auto max-h-[80vh] min-h-0 lg:h-[65vh] lg:max-h-[600px] lg:min-h-[450px] relative overflow-hidden shadow-2xl border border-gray-800 flex flex-col items-center p-6 lg:p-8">
             {/* Moody background glow */}
             <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-white/5 rounded-full blur-[80px] pointer-events-none"></div>
             
