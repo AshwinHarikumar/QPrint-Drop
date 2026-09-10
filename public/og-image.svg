@@ -1,0 +1,27 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="120" y1="52" x2="1100" y2="580" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#09090B" />
+      <stop offset="1" stop-color="#27272A" />
+    </linearGradient>
+    <linearGradient id="accent" x1="212" y1="132" x2="516" y2="454" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF" stop-opacity="0.22" />
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0.06" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" rx="56" fill="url(#bg)" />
+  <circle cx="986" cy="128" r="168" fill="#FFFFFF" fill-opacity="0.08" />
+  <circle cx="192" cy="528" r="232" fill="#FFFFFF" fill-opacity="0.05" />
+  <rect x="110" y="110" width="380" height="380" rx="44" fill="url(#accent)" stroke="#FFFFFF" stroke-opacity="0.14" />
+  <rect x="160" y="160" width="92" height="92" rx="18" fill="#FFFFFF" fill-opacity="0.9" />
+  <rect x="280" y="160" width="92" height="92" rx="18" fill="#FFFFFF" fill-opacity="0.16" />
+  <rect x="400" y="160" width="40" height="40" rx="12" fill="#FFFFFF" fill-opacity="0.28" />
+  <rect x="160" y="280" width="40" height="40" rx="12" fill="#FFFFFF" fill-opacity="0.28" />
+  <rect x="220" y="280" width="152" height="152" rx="28" fill="#FFFFFF" fill-opacity="0.1" stroke="#FFFFFF" stroke-opacity="0.15" />
+  <rect x="392" y="280" width="48" height="48" rx="14" fill="#FFFFFF" fill-opacity="0.88" />
+  <rect x="392" y="348" width="48" height="48" rx="14" fill="#FFFFFF" fill-opacity="0.18" />
+  <text x="570" y="232" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="30" letter-spacing="6">QPRINT DROP</text>
+  <text x="570" y="316" fill="#FFFFFF" font-family="Playfair Display, Georgia, serif" font-size="86" font-weight="600">QR File Transfer</text>
+  <text x="570" y="392" fill="#E4E4E7" font-family="Inter, Arial, sans-serif" font-size="30">Send from mobile. Print on desktop. Stay in sync.</text>
+  <text x="570" y="458" fill="#A1A1AA" font-family="JetBrains Mono, Consolas, monospace" font-size="20" letter-spacing="4">LOCAL SESSION · REAL-TIME QUEUE · PRINT READY</text>
+</svg>

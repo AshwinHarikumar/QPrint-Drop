@@ -1,0 +1,8 @@
+{
+  "name": "QPrint Drop",
+  "description": "QR-based file transfer and mobile printing for moving files from a phone to a desktop print queue.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
