@@ -3,6 +3,7 @@ import QRCode from 'react-qr-code';
 import { io, Socket } from 'socket.io-client';
 import { PrintJob } from '../../shared/types';
 import { FileText, Image as ImageIcon, Trash2, Printer, Download, Eye, QrCode, ChevronDown, Phone, Loader2, ArrowUp, CheckCircle2, Cloud, Database, Shield, Wifi, Server } from 'lucide-react';
+import Seo from '../components/Seo';
 
 export default function Receive() {
   const [sessionId, setSessionId] = useState<string | null>(null);
@@ -118,6 +119,11 @@ export default function Receive() {
 
   return (
     <div className="h-screen bg-[#f4f4f5] relative overflow-hidden flex flex-col font-sans text-gray-900 selection:bg-black selection:text-white">
+      <Seo
+        title="QPrint Drop | QR File Transfer and Mobile Printing"
+        description="Generate a QR session, send files from mobile, and manage a live desktop print queue in real time."
+        canonicalPath="/"
+      />
       
       {/* Navbar */}
       <nav className="absolute top-6 left-1/2 -translate-x-1/2 z-50 flex items-center justify-center bg-[#111] px-8 py-3 rounded-full shadow-[0_20px_50px_rgba(0,0,0,0.3)] border border-white/10 w-max hover:border-white/20 transition-colors duration-300 cursor-default">

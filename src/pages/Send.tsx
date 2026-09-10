@@ -3,6 +3,7 @@ import { useParams, useSearchParams } from 'react-router';
 import { io, Socket } from 'socket.io-client';
 import { UploadCloud, CheckCircle2, AlertCircle, X, Pause, Play, FileText, Image as ImageIcon } from 'lucide-react';
 import { PrintSettings } from '../../shared/types';
+import Seo from '../components/Seo';
 
 interface UploadingFile {
   id: string; // internal id before job creation
@@ -157,6 +158,12 @@ export default function Send() {
 
   return (
     <div className="min-h-screen bg-[#09090b] text-white font-sans pb-12 selection:bg-white/20 selection:text-white relative overflow-hidden">
+      <Seo
+        title="QPrint Drop Sender | Upload Files to a Live Print Queue"
+        description="Connect to a QPrint Drop session, upload files from your phone, and send them to a live desktop print queue."
+        canonicalPath="/"
+        noindex
+      />
 
       {/* Moody background glow */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[150vw] h-64 bg-white/5 rounded-[100%] blur-[80px] pointer-events-none"></div>
