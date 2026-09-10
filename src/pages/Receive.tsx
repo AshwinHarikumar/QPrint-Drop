@@ -272,6 +272,18 @@ export default function Receive() {
         </div>
       </div>
 
+      {/* Developer Credit */}
+      <div className="pb-4 w-full flex justify-center z-10">
+        <a
+          href="https://ashwinharikumar.vercel.app/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-gray-400 hover:text-black transition-colors duration-300 font-['Inter',_sans-serif] text-[11px] uppercase tracking-widest opacity-60 hover:opacity-100"
+        >
+          Developed by Ashwin Harikumar
+        </a>
+      </div>
+
       {/* Bottom Logos */}
       <div className="pb-10 w-full flex flex-col items-center justify-center z-10 pointer-events-none mt-auto">
         <p className="text-gray-400 font-['JetBrains_Mono',_monospace] text-[10px] uppercase tracking-[0.3em] mb-6 opacity-60">Trusted by networks everywhere</p>
