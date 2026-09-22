@@ -55,12 +55,65 @@ npm run build
 npm run start
 ```
 
-## Environment Variables
+## Deploying to Server (20.65.116.196)
 
-Create a `.env.local` file and define the values your deployment needs. The current project notes expect:
+### Connecting your Domain with Cloudflare A Record
+
+1. In your **Cloudflare Dashboard**, navigate to your domain -> **DNS** -> **Records**.
+2. Add or edit an **A Record**:
+   - **Type**: `A`
+   - **Name**: `@` (or subdomain, e.g. `print`)
+   - **IPv4 address**: `20.65.116.196`
+   - **Proxy status**: **Proxied** (Orange cloud icon enabled)
+3. In Cloudflare **SSL/TLS**:
+   - Set encryption mode to **Flexible** (or **Full** if your server has SSL/TLS certificates).
+4. In Cloudflare **Network**:
+   - Ensure **WebSockets** is toggled **ON** (default is enabled).
+
+### Option 1: Docker Compose (Binds Port 80 & 3000)
 
 ```bash
-GEMINI_API_KEY=your_api_key_here
+docker compose up -d --build
+```
+This automatically routes standard incoming HTTP traffic from Cloudflare on port 80 directly to the app!
+
+### Option 2: PM2 / Node on Linux Server
+
+```bash
+# 1. Install dependencies & build
+npm ci
+npm run build
+
+# 2. Run with PM2 daemon
+sudo npm install -g pm2
+pm2 start dist/server.cjs --name qprint-drop
+pm2 save
+pm2 startup
+```
+
+### Option 3: Systemd Service
+Copy `qprint.service` to `/etc/systemd/system/qprint.service`:
+```bash
+sudo systemctl daemon-reload
+sudo systemctl enable --now qprint
+```
+
+### Optional: Nginx Reverse Proxy (Port 80 -> 3000)
+To serve directly on port 80 without `:3000` in the URL, use the provided `nginx.conf`:
+```bash
+sudo cp nginx.conf /etc/nginx/sites-available/qprint-drop
+sudo ln -s /etc/nginx/sites-available/qprint-drop /etc/nginx/sites-enabled/
+sudo nginx -t && sudo systemctl reload nginx
+```
+
+## Environment Variables
+
+The project includes `.env` preconfigured for `http://20.65.116.196:3000`:
+
+```bash
+PORT=3000
+APP_URL=http://20.65.116.196:3000
+SESSION_SIGNING_SECRET=your_signing_secret_here
 ```
 
 ## Available Scripts

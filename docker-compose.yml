@@ -1,0 +1,13 @@
+services:
+  qprint-drop:
+    build: .
+    container_name: qprint-drop
+    restart: always
+    ports:
+      - "80:3000"
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+      - APP_URL=
+      - SESSION_SIGNING_SECRET=qprint-drop-production-secret-change-me

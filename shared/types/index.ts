@@ -1,11 +1,21 @@
 export interface TransferSession {
   sessionId: string;
+  name: string;
+  code: string;
+  token?: string;
   status: "waiting" | "active" | "expired" | "closed";
   createdAt: number;
   expiresAt: number;
+  durationMinutes: number;
   desktopConnected: boolean;
   uploaderConnected: boolean;
   jobCount: number;
+}
+
+export interface SessionLookupResult {
+  valid: boolean;
+  session: TransferSession;
+  token: string;
 }
 
 export interface PrintSettings {

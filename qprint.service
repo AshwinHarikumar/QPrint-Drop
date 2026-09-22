@@ -1,0 +1,21 @@
+[Unit]
+Description=QPrint Drop Service
+After=network.target
+
+[Service]
+Type=simple
+User=ubuntu
+WorkingDirectory=/var/www/qprint-drop
+ExecStart=/usr/bin/node dist/server.cjs
+Restart=always
+RestartSec=10
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=qprint-drop
+Environment=NODE_ENV=production
+Environment=PORT=3000
+Environment=APP_URL=http://20.65.116.196:3000
+Environment=SESSION_SIGNING_SECRET=qprint-drop-production-secret-change-me
+
+[Install]
+WantedBy=multi-user.target
